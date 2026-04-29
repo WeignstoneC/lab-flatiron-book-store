@@ -43,5 +43,107 @@ const bookStore = {
     ]
 }
 
-// Write your code here!
+// Select and change header element
+const header = document.getElementById('header');
+header.textContent = bookStore.name;
 
+// Select the book list
+const bookList = document.getElementById('book-list');
+
+// Remove the example li if it exists
+const exampleLi = document.getElementById('delete-this');
+if (exampleLi) {
+    bookList.removeChild(exampleLi);
+}
+
+// Create and append elements for each book
+bookStore.books.forEach(book => {
+        // Create bookContainer (li)
+        const bookContainer = document.createElement('li');
+    
+        // Create bookTitle (h3)
+        const bookTitle = document.createElement('h3');
+        bookTitle.textContent = book.title;
+    
+        // Create bookAuthor (p)
+        const bookAuthor = document.createElement('p');
+        bookAuthor.textContent = book.author;
+    
+        // Create bookImage (img)
+        const bookImage = document.createElement('img');
+        bookImage.src = book.imageUrl;
+    
+        // Append elements to bookContainer
+        bookContainer.appendChild(bookTitle);
+        bookContainer.appendChild(bookAuthor);
+        bookContainer.appendChild(bookImage);
+    
+        // Append bookContainer to bookList
+        bookList.appendChild(bookContainer);
+});
+const bookList = document.getElementById('book-list');
+
+// Remove the example li
+const exampleLi = document.getElementById('delete-this');
+if (exampleLi) {
+    bookList.removeChild(exampleLi);
+}
+
+// Create elements for each book
+bookStore.books.forEach(book => {
+        // Create bookContainer (li)
+        const bookContainer = document.createElement('li');
+    
+        // Create bookTitle (h3)
+        const bookTitle = document.createElement('h3');
+        bookTitle.textContent = book.title;
+    
+        // Create bookAuthor (p)
+        const bookAuthor = document.createElement('p');
+        bookAuthor.textContent = book.author;
+    
+        // Create bookImage (img)
+        const bookImage = document.createElement('img');
+        bookImage.src = book.imageUrl;
+    
+        // Append elements to bookContainer
+        bookContainer.appendChild(bookTitle);
+        bookContainer.appendChild(bookAuthor);
+        bookContainer.appendChild(bookImage);
+    
+        // Append bookContainer to bookList
+        bookList.appendChild(bookContainer);
+});
+
+// Select the book list
+const bookList = document.getElementById('book-list');
+
+// Remove the example li
+const exampleLi = document.getElementById('delete-this');
+bookList.removeChild(exampleLi);
+
+// Create elements for each book
+bookStore.books.forEach(book => {
+    // Create bookContainer (li)
+    const bookContainer = document.createElement('li');
+    
+    // Create bookTitle (h3)
+    const bookTitle = document.createElement('h3');
+    bookTitle.textContent = book.title;
+    
+    // Create bookAuthor (p)
+    const bookAuthor = document.createElement('p');
+    bookAuthor.textContent = book.author;
+    
+    // Create bookImage (img)
+    const bookImage = document.createElement('img');
+    bookImage.src = book.imageUrl;
+    
+    // Append elements to bookContainer
+    bookContainer.appendChild(bookTitle);
+    bookContainer.appendChild(bookAuthor);
+    bookContainer.appendChild(bookImage);
+    
+    // Append bookContainer to bookList
+    bookList.appendChild(bookContainer);
+});
